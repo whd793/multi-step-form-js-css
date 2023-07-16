@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./src/styles.css" />
+    <script src="./src/index.js" defer></script>
+  </head>
+
+  <body>
+    <form action="#" class="form">
+      <h1 class="text-center">Register</h1>
+      <div class="progress-bar">
+        <div class="currentProgress"></div>
+        <div
+          class="progress-step progress-step-active"
+          data-title="Intro"
+        ></div>
+        <div class="progress-step" data-title="Contact"></div>
+        <div class="progress-step" data-title="Id"></div>
+        <div class="progress-step" data-title="Password"></div>
+      </div>
+
+      <div class="form-step form-step-active">
+        <div class="input-group">
+          <label for="username">Username: </label>
+          <input type="text" id="username" name="username" />
+        </div>
+
+        <div class="input-group">
+          <label for="position">Position: </label>
+          <input type="text" id="position" name="position" />
+        </div>
+
+        <div class="">
+          <a class="btn btn-next width-50 ml-auto">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label for="phone">Phone: </label>
+          <input type="text" id="phone" name="phone" />
+        </div>
+
+        <div class="input-group">
+          <label for="email">Email: </label>
+          <input type="text" id="email" name="email" />
+        </div>
+
+        <div class="btns-group">
+          <a class="btn btn-prev">Prev</a>
+          <a class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label for="dob">Date of birth: </label>
+          <input type="date" id="dob" name="dob" />
+        </div>
+
+        <div class="input-group">
+          <label for="nationalid">Id: </label>
+          <input type="number" id="nationalid" name="nationalid" />
+        </div>
+
+        <div class="btns-group">
+          <a class="btn btn-prev">Prev</a>
+          <a class="btn btn-next">Next</a>
+        </div>
+      </div>
+
+      <div class="form-step">
+        <div class="input-group">
+          <label for="password">Password: </label>
+          <input type="password" id="password" name="password" />
+        </div>
+
+        <div class="input-group">
+          <label for="confirmpassword">Confirm password: </label>
+          <input type="password" id="confirmpassword" name="confirmpassword" />
+        </div>
+
+        <div class="btns-group">
+          <a class="btn btn-prev">Prev</a>
+          <input type="submit" value="Submit" class="btn" />
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

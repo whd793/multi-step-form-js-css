@@ -1,0 +1,156 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: montse */
+  display: grid;
+  margin: 0;
+  place-items: center;
+  min-height: 100vh;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+input {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+.btn {
+  display: block;
+  padding: 0.75rem;
+  text-decoration: none;
+  background-color: cadetblue;
+  color: white;
+  border-radius: 0.25rem;
+  text-align: center;
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 0 0 2px #fff, 0 0 0 3px cadetblue;
+  /* box-shadow: 2px 2px 0rgb(3, 2, 2)ack; */
+}
+
+.text-center {
+  text-align: center;
+}
+
+.btns-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.width-50 {
+  width: 50%;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+/* form */
+
+.form {
+  width: clamp(320px, 30%, 430px);
+  /* width: 30%; */
+  /* min-width: 320px; */
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+}
+
+.input-group {
+  margin: 2rem 0;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step-active {
+  display: block;
+  animation: animate 0.5s;
+  transform-origin: top;
+}
+
+/* progress */
+.progress-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: 2.5rem 0;
+}
+
+.progress-bar::before,
+.currentProgress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  background-color: #dcdcdc;
+  z-index: -1;
+}
+
+.currentProgress {
+  background-color: blue;
+  width: 0%;
+}
+
+/* .progress-step::after { */
+/* content:  */
+/* content: counter(step); */
+/* } */
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #dcdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.progress-step-active {
+  background-color: blue;
+  color: white;
+  animation: progressbar;
+  /* transition: .2s; */
+}
+
+@keyframes animate {
+  from {
+    transform: scale(1, 0);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1, 1);
+    opacity: 1;
+  }
+}
